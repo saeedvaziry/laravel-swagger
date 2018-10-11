@@ -8,11 +8,11 @@ use Illuminate\Console\Command;
 class GenerateDocsCommand extends Command
 {
     /**
-     * The console command name.
+     * The console command signature.
      *
      * @var string
      */
-    protected $name = 'laravel-swagger:generate';
+    protected $signature = 'laravel-swagger:generate {--source=} {--output=}';
 
     /**
      * The console command description.
@@ -28,7 +28,11 @@ class GenerateDocsCommand extends Command
      */
     public function handle()
     {
-        $this->info('Regenerating docs');
-        Generator::generateDocs();
+    	if($this->option('source')) {		
+	        $this->info('Regenerating docs');
+	        Generator::generateDocs($this->option('source'), $this->option('output'));
+    	} else {
+    		$this->error('--source option is required');
+    	}
     }
 }

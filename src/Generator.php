@@ -48,20 +48,21 @@ class Generator
      */
     protected $yamlCopyRequired;
 
-    public function __construct()
+    public function __construct($source, $output = null)
     {
-        $this->appDir = config('laravel-swagger.paths.annotations');
+        $fileName = $output != null ? $output : config('laravel-swagger.paths.docs_json', 'api-docs.json');
+        $this->appDir = base_path($source);
         $this->docDir = config('laravel-swagger.paths.docs');
-        $this->docsFile = $this->docDir.'/'.config('laravel-swagger.paths.docs_json', 'api-docs.json');
-        $this->yamlDocsFile = $this->docDir.'/'.config('laravel-swagger.paths.docs_yaml', 'api-docs.yaml');
+        $this->docsFile = $this->docDir.'/'.$fileName.'.json';
+        $this->yamlDocsFile = $this->docDir.'/'.$fileName.'.yaml';
         $this->excludedDirs = config('laravel-swagger.paths.excludes');
         $this->constants = config('laravel-swagger.constants') ?: [];
         $this->yamlCopyRequired = config('laravel-swagger.generate_yaml_copy', false);
     }
 
-    public static function generateDocs()
+    public static function generateDocs($source, $output = null)
     {
-        (new static)->prepareDirectory()
+        (new static($source, $output))->prepareDirectory()
             ->defineConstants()
             ->scanFilesForDocumentation()
             ->populateServers()
@@ -80,12 +81,11 @@ class Generator
             throw new LaravelSwaggerException('Documentation storage directory is not writable');
         }
 
-        // delete all existing documentation
         if (File::exists($this->docDir)) {
-            File::deleteDirectory($this->docDir);
+            File::delete($this->docDir);
+        } else {
+            File::makeDirectory($this->docDir);
         }
-
-        File::makeDirectory($this->docDir);
 
         return $this;
     }
