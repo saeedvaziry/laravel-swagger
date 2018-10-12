@@ -8,7 +8,9 @@ Laravel Swagger UI Generator
 
 ## Usage
 
-`php artisan laravel-swagger:generate`
+`php artisan laravel-swagger:generate --source=app/Http/Controllers --output=api-docs`
+
+This will generate `api-docs.json` in `storage/api-docs` folder
 
 ## License
 
