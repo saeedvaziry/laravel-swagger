@@ -4,7 +4,7 @@ Laravel Swagger UI Generator
 
 ## Installation
 
-`composer require cotlet/laravel-swagger`
+`composer require saeedvaziry/laravel-swagger`
 
 ## Usage
 
