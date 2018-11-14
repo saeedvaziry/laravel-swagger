@@ -1,6 +1,6 @@
 <?php
 
-use Cotlet\LaravelSwagger\Exceptions\LaravelSwaggerException;
+use SaeedVaziry\LaravelSwagger\Exceptions\LaravelSwaggerException;
 
 if (! function_exists('swagger_ui_dist_path')) {
     /**
@@ -9,7 +9,7 @@ if (! function_exists('swagger_ui_dist_path')) {
      * @param null $asset
      *
      * @return string
-     * @throws \Cotlet\LaravelSwagger\Exceptions\LaravelSwaggerException
+     * @throws \SaeedVaziry\LaravelSwagger\Exceptions\LaravelSwaggerException
      */
     function swagger_ui_dist_path($asset = null)
     {

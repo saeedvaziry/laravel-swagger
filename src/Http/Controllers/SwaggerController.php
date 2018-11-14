@@ -1,6 +1,6 @@
 <?php
 
-namespace Cotlet\LaravelSwagger\Http\Controllers;
+namespace SaeedVaziry\LaravelSwagger\Http\Controllers;
 
 use File;
 use Response;

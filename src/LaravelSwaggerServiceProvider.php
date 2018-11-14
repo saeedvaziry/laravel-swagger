@@ -1,9 +1,9 @@
 <?php
 
-namespace Cotlet\LaravelSwagger;
+namespace SaeedVaziry\LaravelSwagger;
 
 use Illuminate\Support\ServiceProvider;
-use Cotlet\LaravelSwagger\Console\GenerateDocsCommand;
+use SaeedVaziry\LaravelSwagger\Console\GenerateDocsCommand;
 
 class LaravelSwaggerServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,7 @@ class LaravelSwaggerServiceProvider extends ServiceProvider
         ], 'config');
 
         //Include routes
-        \Route::group(['namespace' => 'Cotlet\LaravelSwagger'], function ($router) {
+        \Route::group(['namespace' => 'SaeedVaziry\LaravelSwagger'], function ($router) {
             require __DIR__.'/routes.php';
         });
 

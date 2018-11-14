@@ -1,5 +1,5 @@
 {
-  "name": "cotlet/laravel-swagger",
+  "name": "saeedvaziry/laravel-swagger",
   "description": "Laravel Swagger Generator",
   "license": "MIT",
   "authors": [
@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Cotlet\\LaravelSwagger\\": "src"
+      "SaeedVaziry\\LaravelSwagger\\": "src"
     },
     "files": [
       "src/helpers.php"
@@ -35,7 +35,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Cotlet\\LaravelSwagger\\LaravelSwaggerServiceProvider"
+        "SaeedVaziry\\LaravelSwagger\\LaravelSwaggerServiceProvider"
       ]
     }
   },

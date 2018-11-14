@@ -1,6 +1,6 @@
 <?php
 
-namespace Cotlet\LaravelSwagger\Http\Controllers;
+namespace SaeedVaziry\LaravelSwagger\Http\Controllers;
 
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller as BaseController;

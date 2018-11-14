@@ -1,8 +1,8 @@
 <?php
 
-namespace Cotlet\LaravelSwagger\Console;
+namespace SaeedVaziry\LaravelSwagger\Console;
 
-use Cotlet\LaravelSwagger\Generator;
+use SaeedVaziry\LaravelSwagger\Generator;
 use Illuminate\Console\Command;
 
 class GenerateDocsCommand extends Command

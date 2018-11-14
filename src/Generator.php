@@ -1,9 +1,9 @@
 <?php
 
-namespace Cotlet\LaravelSwagger;
+namespace SaeedVaziry\LaravelSwagger;
 
 use File;
-use Cotlet\LaravelSwagger\Exceptions\LaravelSwaggerException;
+use SaeedVaziry\LaravelSwagger\Exceptions\LaravelSwaggerException;
 use Symfony\Component\Yaml\Dumper as YamlDumper;
 
 class Generator
