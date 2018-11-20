@@ -6,7 +6,7 @@ Laravel Swagger UI Generator
 
 `composer require saeedvaziry/laravel-swagger`
 
-Make sure you have this packages on your `composer.json` :
+Make sure you have this packages in your `composer.json` :
 
     "swagger-api/swagger-ui": "^3.19",
     "zircote/swagger-php": "~2.0"
