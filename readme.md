@@ -6,6 +6,11 @@ Laravel Swagger UI Generator
 
 `composer require saeedvaziry/laravel-swagger`
 
+Make sure you have this packages on your `composer.json` :
+
+    "swagger-api/swagger-ui": "^3.19",
+    "zircote/swagger-php": "~2.0"
+
 ## Usage
 
 `php artisan laravel-swagger:generate --source=app/Http/Controllers --output=api-docs`
